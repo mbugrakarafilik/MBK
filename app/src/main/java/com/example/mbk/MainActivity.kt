@@ -2,7 +2,7 @@ package com.example.mbk
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
