@@ -1,12 +1,26 @@
 package com.example.mbk
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlin.math.log
+import androidx.appcompat.app.AppCompatActivity
+import com.example.mbk.databinding.ActivityMainBinding
+import com.example.mbk.menu.MenuFragment
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        show()
+
     }
+
+    private fun show() {
+        supportFragmentManager.beginTransaction().add(R.id.frame_layout,MenuFragment()).commit()
+    }
+
 }
