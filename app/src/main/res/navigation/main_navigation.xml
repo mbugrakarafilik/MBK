@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.mbk.menu.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_apiControlFragment"
+            app:destination="@id/apiControlFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizMenuFragment"
+        android:name="com.example.mbk.fragments.QuizMenuFragment"
+        android:label="QuizMenuFragment" >
+        <argument
+            android:name="QuizPage"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/apiControlFragment"
+        android:name="com.example.mbk.fragments.ApiControlFragment"
+        android:label="ApiControlFragment" />
+</navigation>
